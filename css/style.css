@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #22222e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading {
+    text-align: center;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container .select-movie {
+    width: fit-content;
+    margin: 32px 0;
+}
+
+.container .select-movie #selectMovie {
+    padding: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.container .seat-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #1d1d27;
+    padding: 0 10px;
+}
+
+.container .seat-status li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .seat-status li small {
+    margin-left: 8px;
+    color: gray;
+}
+
+.seat {
+    width: 16px;
+    height: 14px;
+    background-color: rgb(65, 62, 62);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+.selected {
+    background-color: rgb(110, 218, 253);
+}
+
+.occupied {
+    background-color: white;
+}
+
+.theatre .movie-screen {
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
+    height: 100px;
+    width: 200px;
+    transform: rotateX(-45deg);
+    margin-bottom: 24px;
+}
+
+.theatre {
+    perspective: 1000px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.theatre .row {
+    display: flex;
+}
+
+.row {
+    margin-bottom: 4px;
+}
+
+.theatre .row .seat {
+    margin-right: 4px;
+}
+
+.theatre .row .seat:nth-child(2) {
+    margin-right: 18px;
+}
+
+.theatre .row .seat:nth-last-child(2) {
+    margin-left: 18px;
+}
+
+.theatre .row .seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.theatre .display-status .noOfSeats,
+.theatre .display-status .amount {
+    color: #727288;
+}
+
+.theatre .display-status {
+    margin-top: 24px;
+    text-align: center;
+}
